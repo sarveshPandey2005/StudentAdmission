@@ -296,3 +296,4 @@ app.get('/', (req, res) => res.send('Server is running...'));
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
