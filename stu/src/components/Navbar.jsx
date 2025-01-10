@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 
+// Import the image from the assets folder
+import logoImg from '../assets/mahadev.jpg'; // Adjust the relative path based on your project structure
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -31,7 +34,7 @@ const Navbar = () => {
         {/* Logo and Title Section */}
         <div className="flex items-center space-x-4">
           <img
-            src="/src/assets/mahadev.jpg" // Replace with your logo image path
+            src={logoImg} // Use the imported image here
             alt="Logo"
             className="w-20 h-20 rounded-full" // Adjust size and border radius as needed
           />

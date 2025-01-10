@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom'; // For navigation
 import Navbar from './Navbar'; // Import Navbar
 import Footer from './Footer'; // Import Footer
 
+// Import images from 'src/assets'
+import cambridgeImg from '../assets/cambridge.jpg';
+import vaibhavSirImg from '../assets/vaibhavSir.jpg';
+import shivSirImg from '../assets/shivSir.jpg';
+import deepakSirImg from '../assets/deepakSir.jpg';
+import dineshSirImg from '../assets/dineshSir.jpg';
+
 const HomePage = () => {
   return (
     <div>
-      {/* Navbar */}
      
 
       {/* Hero Section */}
       <header
         className="relative bg-cover bg-center h-screen text-white overflow-hidden"
-        style={{ backgroundImage: "url('/src/assets/cambridge.jpg')" }}
+        style={{ backgroundImage: `url(${cambridgeImg})` }} // Use imported image here
       >
         {/* Dark overlay to improve text visibility */}
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -34,8 +40,8 @@ const HomePage = () => {
         </div>
       </header>
 
-       {/* Faculty Section */}
-       <section className="py-20 bg-teal-50">
+      {/* Faculty Section */}
+      <section className="py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-semibold text-teal-600 mb-6 animate__animated animate__fadeIn animate__delay-1s">
             Meet Our Faculty
@@ -47,17 +53,17 @@ const HomePage = () => {
             {/* Faculty Member 1 */}
             <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-300 hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
               <img
-                src="/src/assets/vaibhavSir.jpg" // Replace with actual faculty image
+                src={vaibhavSirImg} // Imported image here
                 alt="Faculty 1"
                 className="w-50 h-50 rounded-3xl mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2"> Vaibhav Mishra</h3>
+              <h3 className="text-xl font-semibold mb-2">Vaibhav Mishra</h3>
               <p className="text-gray-700">Professor of Computer Science</p>
             </div>
             {/* Faculty Member 2 */}
             <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-300 hover:scale-105 animate__animated animate__fadeIn animate__delay-4s">
               <img
-                src="/src/assets/shivSir.jpg" // Replace with actual faculty image
+                src={shivSirImg} // Imported image here
                 alt="Faculty 2"
                 className="w-50 h-50 rounded-3xl mx-auto mb-4"
               />
@@ -67,22 +73,22 @@ const HomePage = () => {
             {/* Faculty Member 3 */}
             <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-300 hover:scale-105 animate__animated animate__fadeIn animate__delay-5s">
               <img
-                src="/src/assets/deepakSir.jpg" // Replace with actual faculty image
+                src={deepakSirImg} // Imported image here
                 alt="Faculty 3"
                 className="w-50 h-50 rounded-3xl mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2"> Deepak Singh</h3>
+              <h3 className="text-xl font-semibold mb-2">Deepak Singh</h3>
               <p className="text-gray-700">Head of Department</p>
             </div>
             {/* Faculty Member 4 */}
             <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transform transition duration-300 hover:scale-105 animate__animated animate__fadeIn animate__delay-6s">
               <img
-                src="/src/assets/dineshSir.jpg" // Replace with actual faculty image
+                src={dineshSirImg} // Imported image here
                 alt="Faculty 4"
                 className="w-50 h-50 rounded-3xl mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">Dinesh Maurya</h3>
-              <p className="text-gray-700">Professor of Computer Science </p>
+              <p className="text-gray-700">Professor of Computer Science</p>
             </div>
           </div>
         </div>
@@ -114,9 +120,6 @@ const HomePage = () => {
         </div>
       </section>
 
-     
-
-      {/* Footer */}
      
     </div>
   );

@@ -23,6 +23,15 @@ const Dashboard = () => {
     }, 1500); // Simulate a short loading for 1.5 seconds
   };
 
+  // Handle Contact Requests navigation
+  const handleContactRequestsClick = () => {
+    setIsLoading(true); // Set loading to true while navigating
+    setTimeout(() => {
+      setIsLoading(false); // Reset loading after timeout
+      navigate('/contact-requests'); // Navigate to the "Contact Requests" page
+    }, 1500); // Simulate a short loading for 1.5 seconds
+  };
+
   return (
     <div className="flex flex-col lg:flex-row pt-32">
       {/* Sidebar */}
@@ -42,7 +51,8 @@ const Dashboard = () => {
             </span>
           </li>
           <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
-            <Link to="#">Settings</Link> {/* Link to Settings Page */}
+            {/* Trigger Contact Request page navigation */}
+            <span onClick={handleContactRequestsClick}>Contact Request</span>
           </li>
         </ul>
       </div>
@@ -52,9 +62,6 @@ const Dashboard = () => {
         {/* Header */}
         <div className="bg-white shadow p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
           <h1 className="text-xl font-bold mb-4 sm:mb-0">Dashboard</h1>
-          {/* <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            Logout
-          </button> */}
         </div>
 
         {/* Dashboard Content */}

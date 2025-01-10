@@ -277,6 +277,18 @@ app.get('/api/students', async (req, res) => {
 });
 
 
+// Route to fetch all contact requests
+app.get('/api/contact-requests', async (req, res) => {
+  try {
+    const contactRequests = await Contact.find(); // Fetch all contact requests from the database
+    res.json(contactRequests); // Return the contact requests as JSON
+  } catch (error) {
+    console.error('Error fetching contact requests:', error);
+    res.status(500).send('Server Error');
+  }
+});
+
+
 
 // Basic route for server status
 app.get('/', (req, res) => res.send('Server is running...'));

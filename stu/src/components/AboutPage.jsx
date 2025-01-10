@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+import cambridgeImg from '../assets/cambridge.jpg';
+
 const AboutPage = () => {
   return (
     <div>
@@ -42,7 +44,7 @@ const AboutPage = () => {
           </p>
           <div className="relative">
             <img
-              src="https://via.placeholder.com/1200x500" // Replace with actual image URL
+              src={cambridgeImg} // Replace with actual image URL
               alt="College Campus"
               className="w-full h-80 object-cover rounded-xl shadow-lg"
             />

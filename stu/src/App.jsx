@@ -10,12 +10,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AdmissionsList from "./components/AdmissionsList"; // Add this import
 import TotalStudents from "./components/TotalStudents";
-
+import ContactRequestPage from "./components/ContactRequestPage"; // Import the new ContactRequestPage component
 
 const App = () => {
   return (
-    <Router>
-      {/* Navbar is rendered outside Routes to ensure it stays visible */}
+    <Router basename="/StudentAdmission">
+    
       <Navbar />
       
       {/* Main content area */}
@@ -33,6 +33,9 @@ const App = () => {
           <Route path="/users" element={<TotalStudents />} />
           <Route path="/AdmissionsList" element={<AdmissionsList />} />
 
+          {/* New Route for Contact Requests */}
+          <Route path="/contact-requests" element={<ContactRequestPage />} />
+          
           {/* Catch-all Route for 404 */}
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>
